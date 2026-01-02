@@ -1,3 +1,77 @@
+# Seafood Marketplace
+
+Monorepo for a small Seafood Marketplace application with separate `backend/` and `frontend/` folders.
+
+This repository contains:
+
+- `backend/` — Express/Node API, controllers, models, and file uploads
+- `frontend/` — React + Vite single-page application
+
+## Quick Overview
+
+- Backend runs on Node/Express and exposes REST endpoints used by the frontend.
+- Frontend is built with Vite and serves the UI; it talks to the backend via `VITE_API_BASE_URL`.
+
+## Setup (both parts)
+
+Prerequisites:
+
+- Node.js 16+ (LTS recommended)
+- npm or yarn
+
+Start the backend (example):
+
+```powershell
+cd backend
+npm install
+npm run dev
+```
+
+Start the frontend:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+## Environment variables
+
+- Backend: create `.env` inside `backend/` for DB connection, secret keys, etc. Do NOT commit `.env` files.
+- Frontend: use `.env` in `frontend/` and expose client variables with `VITE_` prefix (for example `VITE_API_BASE_URL`).
+
+## Important files and folders
+
+- `backend/uploads/` — user-uploaded files (ignored in git)
+- `frontend/src/` — React source code
+- `frontend/README.md` — frontend-specific README
+
+## Git / .gitignore notes
+
+Common generated items are ignored (for example `node_modules/`, `dist/`, `backend/uploads/`). If large folders are already tracked, remove them from the index with:
+
+```powershell
+git rm -r --cached node_modules
+git rm -r --cached backend/uploads
+git add .gitignore
+git commit -m "Stop tracking generated files and add .gitignore"
+```
+
+## Contributing
+
+- Create a feature branch `feature/your-feature`
+- Keep commits small; write clear PR descriptions
+- Run linters and tests before opening a PR
+
+## Next suggestions
+
+- Add `CONTRIBUTING.md` with contribution rules
+- Add a `LICENSE` file
+- Add CI (GitHub Actions) to run tests and lint on PRs
+
+---
+
+Frontend README: [frontend/README.md](frontend/README.md)
 # Seafood Marketplace — Frontend
 
 A modern React + Vite frontend for the Seafood Marketplace application.
