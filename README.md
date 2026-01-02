@@ -72,6 +72,35 @@ git commit -m "Stop tracking generated files and add .gitignore"
 ---
 
 Frontend README: [frontend/README.md](frontend/README.md)
+
+## Table of contents
+
+- [Overview](#seafood-marketplace)
+- [Prerequisites](#setup-both-parts)
+- [Running locally](#setup-both-parts)
+- [Environment variables](#environment-variables)
+- [Development workflow](#development-workflow)
+- [Contributing](#contributing)
+- [License](#license--contact)
+
+## Development workflow
+
+Follow these practices to keep the repository healthy and reviewable:
+
+- Branches: `main` for releases; feature branches named `feature/<short-desc>`; hotfix branches `hotfix/<short-desc>`.
+- Commit messages: follow Conventional Commits (e.g., `feat(auth): add JWT login`).
+- Pull Requests: open PRs against `main` with a clear description, test instructions, and list of changed files.
+- CI: add tests and linters to run on PRs (suggest GitHub Actions).
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines, branch strategy, commit conventions, and PR checklist.
+
+## License & Contact
+
+This project is available under the terms in the `LICENSE` file. Change the license file if you prefer a different license.
+
+Contact the maintainers via the repository issues or add a maintainer email here.
 # Seafood Marketplace — Frontend
 
 A modern React + Vite frontend for the Seafood Marketplace application.
@@ -167,15 +196,3 @@ The frontend makes API calls to the backend server located in `../backend`. Ensu
 - Port conflicts: change Vite port with `--port` or in `vite.config.js`
 - CORS errors: enable CORS in backend during development or proxy requests
 
-## License & Contact
-
-Specify your license here and a contact point for maintainers.
-
-----
-
-If you want, I can also:
-
-- Create a top-level `README.md` summarizing the whole project (frontend + backend)
-- Add a `CONTRIBUTING.md` and `LICENSE`
-
-Tell me which you'd like next.
