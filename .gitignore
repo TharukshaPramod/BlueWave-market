@@ -1,0 +1,11 @@
+# Ignore backend uploads folder
+backend/uploads/
+node_modules/
+dist/
+build/
+.env
+*.log
+uploads/
+coverage/
+.vscode/
+.DS_Store
